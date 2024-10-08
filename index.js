@@ -35,10 +35,10 @@ Task 4) Calculate the total expenses and return it.
        Output 4) 800
 
 ******************************************************************/
-const totalIncome = incomeTransactions.reduce((total, transaction) => (transaction[0] === 'income' ? total + transaction[1] : total), 0);
+const totalIncome = incomeTransactions.reduce((total, transaction) => total + transaction[1], 0);
 console.log(totalIncome);
 
-const totalExpenses = expenseTransactions.reduce((total, transaction) => (transaction[0] === 'expense' ? total + transaction[1] : total), 0);
+const totalExpenses = expenseTransactions.reduce((total, transaction) => total + transaction[1], 0);
 console.log(totalExpenses);
 
 /*****************************************************************
